@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
+    <a href="index.html" name="index">Index</a>
     <a href="actorsview.php" name="view">view actors</a>
     <?php
         include './dbconnect.php';
