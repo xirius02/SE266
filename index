@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>PHP Labs</title>
+    <!-- links the css style document -->
+    <link rel="stylesheet" type="text/css" href="style.css" href="style.css">
+    <script src="jsindex.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="outline">
+        <div class="footer">
+        <span>2019, Erick Rafael Abreu Mena</span>
+        </div>
+    
+<div class="container">
+        <!-- contains footer information -->
+    <div class="content">
+        <form>
+        <h1>Select the desired lab</h1>
+            <table border="1" align="center">
+                <tr>
+                <th> Lab </th>
+                <th>ZIP Lab</th>
+                </tr>
+                <td><a href="creditcard.php">LAB1</td>
+                <td><a href="http://ict.neit.edu/008003477/public_html/se266/labs/1.zip" download="lab1">Lab1</a></td>
+                </tr>
+                <td><a href="actors.php">LAB2</td>
+                <td><a href="http://ict.neit.edu/008003477/public_html/se266/labs/2.zip" download="lab2">Lab2</a></td>
+            </table>
+        </form>
+        <button onclick="time()">last update:</button>
+            <p id="demo"></p>
+    </div>
+    </div>
+    <div class="links">
+        <h2>Useful Sites/Repo</h2>
+        <a href="www.google.com"><h4>www.google.com</h4></a>
+        <a href="https://www.sqlteam.com/"><h4>www.sqlteam.com</h4></a>
+        <a href="https://www.w3schools.com/"><h4>www.w3schools.com/</h4></a>
+        <a href="https://github.com/xirius02/SE266.git"><h4>Github Repo</h4></a>
+    </div>
+</div>
+    <script>
+        function time()
+        {
+            javascript:alert(document.lastModified);
+        }
+        
+    </script>
+    </body>
+</html>
