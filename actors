@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <a href="actorsview.php" name="view">view actors</a>
+    <?php
+        include './dbconnect.php';
+        include './functions.php';
+        
+        try
+        {
+        if (isPostRequest()) {
+        $db = getDatabase();
+        $stmt = $db->prepare("INSERT INTO actors SET firstname = :name, lastname = :lname, dob = :dob, height = :height");
+            $name = filter_input(INPUT_POST, 'name');
+            $lname = filter_input(INPUT_POST, 'lname');
+            $dob = filter_input(INPUT_POST, 'dob');
+            $height = filter_input(INPUT_POST, 'height');
+            $binds = array(
+                ":name" => $name,
+                ":lname" => $lname,
+                ":dob" => $dob,
+                ":height" => $height
+            );
+            if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
+                $results = 'Data Added';
+            }
+        }
+        }catch (Exception $ex)
+        {
+           echo 'Caught exception: ',  $e->getMessage(), "\n";
+        }
+        
+    ?>
+    
+<h2>Actors</h2>
+
+
+ 
+<form action="#" method="post">
+  First name:<br>
+  <input type="text" name="name" value="">
+  <br>
+  Last name:<br>
+  <input type="text" name="lname" value="">
+  <br>
+  Date of birth:<br>
+  <input type="text" name="dob" id="ch" value="" onclick="//mee();">
+  <br>
+  Height:<br>
+  <input type="text" name="height" id="ch" value="" onclick="//mee();">
+  <br>
+  <input type="submit" value="Submit">
+  <br>
+  <?php if (isPostRequest()) {echo $results;} ?>
+</form>
+
+<script type="text/javascript">
+ var ty = document.getElementById('ch');
+    function mee(){
+        ty.value = "ss";
+    }
+ </script>
+
+</body>
+</html>
