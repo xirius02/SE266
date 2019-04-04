@@ -1,0 +1,44 @@
+body 
+{
+	margin: 0px 0px 0px 0px;
+    font-family: sans-serif;
+    color: black;
+    border: 10px;
+	height: 100%;
+    padding: 20px;
+    border: 10px;
+}
+html
+{
+    background-image: url(images/back.png)
+}
+
+.outline 
+{
+    width: 700px;
+    margin: auto;
+    border: 20px;
+    padding: 10px;
+    border: 5px solid black;
+    border-radius: 30px;
+    height: 750px;
+    background-color: white;
+}
+.footer
+{
+    border: 2px solid blue;
+    border-radius: 30px;
+    float: right;
+    padding: 10px;
+}
+.content
+{
+    text-align: center;
+    padding: 50px;
+    margin: 50px;
+}
+.links
+{
+    margin: 0px 0px 0px 100px;
+    
+}
