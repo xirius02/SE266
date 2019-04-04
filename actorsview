@@ -5,6 +5,7 @@
         <title></title>
     </head>
     <body>
+    <a href="index.html" name="index">Index</a>
         <a href="Actors.php" name="actors">Add Data</a>
         <?php
         /*
